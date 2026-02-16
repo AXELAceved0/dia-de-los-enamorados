@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para vos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="envelope" onclick="openLetter()">
+        <div class="front">Abrir</div>
+
+        <div class="letter" id="letter">
+            <h1>Para vos</h1>
+
+            <p>
+                Hay fechas que quedan guardadas sin hacer ruido,
+                pero que cambian todo.
+            </p>
+
+            <p class="date">26 de diciembre.</p>
+
+            <p>
+                Gracias por estar y por hacer que lo simple
+                se sienta bien.
+            </p>
+
+            <p class="firma">Con cariño.</p>
+        </div>
+    </div>
+
+    <button class="music-btn" onclick="toggleMusic()">Música</button>
+
+    <!-- reproductor oculto de YouTube -->
+    <div id="player" class="youtube-player"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

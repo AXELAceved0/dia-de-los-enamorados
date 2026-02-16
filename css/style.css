@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #eee;
+}
+
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background: #1f3b4d;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.front {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.letter {
+    position: absolute;
+    top: 100%;
+    width: 320px;
+    background: #11212d;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.letter.open {
+    opacity: 1;
+    transform: translateY(-230px);
+}
+
+h1 {
+    color: #9ad1ff;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #d6e6f2;
+}
+
+.date {
+    font-weight: bold;
+    color: #ffd6e0;
+}
+
+.firma {
+    margin-top: 10px;
+    font-style: italic;
+    color: #a8c0d6;
+}
+
+/* corazones */
+.heart {
+    position: absolute;
+    color: #ff6b9a;
+    font-size: 20px;
+    animation: fall linear infinite;
+    top: -10px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+.music-btn {
+    position: absolute;
+    bottom: 20px;
+    background: #11212d;
+    color: #fff;
+    border: 1px solid #9ad1ff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ocultar reproductor */
+.youtube-player {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* responsive */
+@media (max-width: 480px) {
+    .envelope {
+        width: 260px;
+        height: 170px;
+    }
+
+    .letter {
+        width: 260px;
+        padding: 20px;
+    }
+
+    .letter.open {
+        transform: translateY(-200px);
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .music-btn {
+        bottom: 15px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
