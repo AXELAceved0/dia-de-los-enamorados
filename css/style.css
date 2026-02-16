@@ -15,11 +15,16 @@ body {
     color: #eee;
 }
 
+/* SOBRE CON EL PATO */
 .envelope {
     position: relative;
     width: 320px;
     height: 200px;
-    background: #1f3b4d;
+
+    background-image: url("../img/pato.png");
+    background-size: cover;
+    background-position: center;
+
     border-radius: 12px;
     cursor: pointer;
     display: flex;
@@ -29,11 +34,13 @@ body {
 }
 
 .front {
-    color: #fff;
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* CARTA */
 .letter {
     position: absolute;
     top: 100%;
@@ -75,7 +82,7 @@ p {
     color: #a8c0d6;
 }
 
-/* corazones */
+/* CORAZONES */
 .heart {
     position: absolute;
     color: #ff6b9a;
@@ -91,6 +98,7 @@ p {
     }
 }
 
+/* BOTÓN MÚSICA */
 .music-btn {
     position: absolute;
     bottom: 20px;
@@ -102,7 +110,7 @@ p {
     cursor: pointer;
 }
 
-/* ocultar reproductor */
+/* OCULTAR YOUTUBE */
 .youtube-player {
     position: absolute;
     width: 1px;
@@ -111,7 +119,7 @@ p {
     pointer-events: none;
 }
 
-/* responsive */
+/* RESPONSIVE */
 @media (max-width: 480px) {
     .envelope {
         width: 260px;
